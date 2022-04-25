@@ -1,0 +1,2 @@
+window_width=1440
+window_height=720
