@@ -1,3 +1,4 @@
+# Minesweeper game main method
 from tkinter import *
 from turtle import color
 from cell import Cell
@@ -36,9 +37,13 @@ center_frame = Frame(
 )
 center_frame.place(x=utilities.width_prct(25), y=utilities.height_prct(25))
 
-cell_1 = Cell()
-cell_1.create_btn(center_frame)
-cell_1.cell_btn.place(x=0, y=0)
+for x in range(settings.grid_size):
+    for y in range(settings.grid_size):
+        c = Cell(x, y)
+        c.create_btn(center_frame)
+        c.cell_btn.grid(column=x, row=y)
+
+Cell.randomize_mines()
 
 # Run the window
 root.mainloop()
