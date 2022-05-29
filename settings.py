@@ -1,5 +1,5 @@
-# Global settings file for Minesweeper game
-window_width = 800                  # Game window width
-window_height = 600                 # Game window height
-grid_size = 6                       # Game grid size squared
-mine_count = (grid_size ** 2) // 4  # Amount of mines calculation
+WIDTH=1440
+HEIGHT=720
+GRID_SIZE=6
+CELL_COUNT=GRID_SIZE ** 2
+MINES_COUNT=(CELL_COUNT) // 4
